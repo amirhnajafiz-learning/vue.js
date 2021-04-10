@@ -1,1 +1,1 @@
-# Basci Projects
+# Basic Projects
