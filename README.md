@@ -19,6 +19,16 @@ NPM is the recommended installation method when building large scale application
 ```
 $ npm install vue
 ```
+A better way is to use Vue-CLI : 
+```
+$ npm install --global vue-cli
+$ vue init webpack 'myproject'
+$ cd 'myproject'
+$ npm run dev
+```
+Once you run this, it will create the server on <i>Localhost:8080/</i>
+<br />
+Note: It's also good to install vue.js devtools, for inspecting and debugging. ( <a href="https://github.com/vuejs/vue-devtools#vue-devtools"> Here </a> )
 
 ### Source
   * [Plural Sight Course](https://www.pluralsight.com/pricing/skills)
