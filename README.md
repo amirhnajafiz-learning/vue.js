@@ -38,3 +38,4 @@ Note: It's also good to install vue.js devtools, for inspecting and debugging. (
   * [Learn Vue](https://learnvue.co/)
   * [Front end Masters](https://frontendmasters.com/)
   * [Basic Course](https://www.youtube.com/watch?v=nyJSd6V2DRI&list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07)
+  * [Create app with VUE](https://www.udemy.com/course/create-amazing-vue-apps-with-javascript/learn/lecture/23548758#overview)
