@@ -9,6 +9,15 @@
 </head>
 
 <body>
+
+<div id="counters">
+    <h1>Vue.js Components Fundamentals</h1>
+    <click-counter></click-counter>
+    <click-counter></click-counter>
+    <click-counter></click-counter>
+    <click-counter></click-counter>
+</div>
+
 <div id="app">
     <h1>Vue.js Components Fundamentals</h1>
     <click-counter></click-counter>
@@ -17,9 +26,16 @@
     <click-counter></click-counter>
 </div>
 
+<script type="text/x-template" id="click-counter-template">
+    <div>
+        <p>the count is:</p>
+        <button @click="count++">{{count}}</button>
+    </div>
+</script>
 
 <script src="https://unpkg.com/vue"></script>
 <script src="app.js"></script>
+
 </body>
 
 </html>
