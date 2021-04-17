@@ -2,7 +2,7 @@
     <div>
         <PersonalForm ref='pform'></PersonalForm>
         <MedicalForm ref='mform'></MedicalForm>
-        <button v-on:click='submitAll'>Send</button>
+        <button class="submit-button" v-on:click='submitAll'>Send</button>
     </div>
 </template>
 
@@ -25,17 +25,27 @@ export default {
       a.click()
     },
     submitFunction () {
-      // eslint-disable-next-line no-undef
-      if (this.$refs.pform.$data.firstName === undefined || this.$refs.pform.lastName === undefined) {
+      let perdata = this.$refs.pform.$data
+      let meddata = this.$refs.mform.$data
+      if (perdata.firstName === undefined || perdata.lastName === undefined) {
         return
       }
-      var fileName = this.$refs.pform.firstName + '_' + this.$refs.pform.lastName + '.txt'
-      this.download(JSON.stringify(Object.assign({}, this.$refs.pform.$data, this.$refs.mform.$data)), fileName)
+      var fileName = perdata.nationalId + '.txt'
+      this.download(JSON.stringify(Object.assign({}, perdata, meddata), null, 4), fileName)
     },
     submitAll () {
       this.submitFunction()
     }
   }
 }
-
 </script>
+
+<style scoped>
+.submit-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+}
+</style>

@@ -4,15 +4,15 @@
         <hr />
         <span class="user-input-row">
           <label for="user-firstname">First name:</label>
-          <input id="user-firstname" type="text" v-model="firstName" placeholder="Peter" required=true />
+          <input id="user-firstname" type="text" v-model="firstName" placeholder="Peter" required=true pattern="[A-Za-z]" />
         </span>
         <span class="user-input-row">
           <label for="user-lastname">Last name:</label>
-          <input id="user-lastname" type="text" v-model="lastName" placeholder="Griffen" required=true />
+          <input id="user-lastname" type="text" v-model="lastName" placeholder="Griffen" required=true pattern="[A-Za-z]" />
         </span>
         <span class="user-input-row">
           <label for="user-age">Age:</label>
-          <input id="user-age" type="number" v-model="age" required />
+          <input id="user-age" type="number" v-model="age" required=ture min=1 max=100 />
         </span>
         <span class="user-input-row">
           <span>Gender:</span>
@@ -23,7 +23,7 @@
         </span>
         <span class="user-input-row">
           <label for="user-nationalId">National ID:</label>
-          <input id="user-nationalId" type="text" v-model="nationalId" placeholder="092XXXXXXX" />
+          <input id="user-nationalId" type="text" v-model="nationalId" placeholder="092XXXXXXX" pattern="[0-9]" />
         </span>
         <span class="user-input-row">
           <label for="cityOption">City:</label>
