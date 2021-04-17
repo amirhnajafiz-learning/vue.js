@@ -19,7 +19,7 @@
           <label for="man">Male:</label>
           <input type="radio" v-model="gender" id="man" value="man" />
           <label for="women">Female:</label>
-          <input type="radio" v-model="gender" id="woman" value="woman" />
+          <input type="radio" v-model="gender" id="women" value="woman" />
         </span>
         <span class="user-input-row">
           <label for="user-nationalId">National ID:</label>
@@ -39,7 +39,6 @@
           <label for="marrige">Are you single ?</label>
           <input id="marrige" type="checkbox" v-model="is_single" />
         </span>
-        <button v-on:click="submitFunction" class="submit-button">Send</button>
     </div>
 </template>
 
@@ -54,24 +53,7 @@ export default {
     nationalId: undefined,
     city: undefined,
     is_single: undefined
-  }),
-  methods: {
-    download (content, fileName) {
-      var a = document.createElement('a')
-      var file = new Blob([content], {type: 'text/plain'})
-      a.href = URL.createObjectURL(file)
-      a.download = fileName
-      a.click()
-    },
-    submitFunction () {
-      // eslint-disable-next-line no-undef
-      if (this.firstName === undefined || this.lastName === undefined) {
-        return
-      }
-      var fileName = this.firstName + '_' + this.lastName + '.txt'
-      this.download(JSON.stringify(this.$data), fileName)
-    }
-  }
+  })
 }
 </script>
 

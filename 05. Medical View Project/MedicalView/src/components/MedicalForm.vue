@@ -21,14 +21,14 @@
         <span class="user-input-row">
           <span>Drugs:</span>
           <label for="asprin">Asprin</label>
-          <input id="asprin" type="checkbox" v-model="drugs" />
+          <input id="asprin" type="checkbox" value="Asprin" v-model="drugs" />
           <label for="zinc">Zinc</label>
-          <input id="zinc" type="checkbox" v-model="drugs" />
+          <input id="zinc" type="checkbox" value="Zinc" v-model="drugs" />
           <label for="metadol">Metadol</label>
-          <input id="metadol" type="checkbox" v-model="drugs" />
+          <input id="metadol" type="checkbox" value="Metadol" v-model="drugs" />
         </span>
         <span class="user-input-row">
-          <lable for="comments">Any comments ?</lable><br />
+          <label for="comments">Any comments ?</label><br />
           <textarea id="comments" v-model="comment"></textarea>
         </span>
     </div>
