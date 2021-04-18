@@ -1,7 +1,8 @@
 <template>
     <div class="medicalFormContainer">
-        <h2>Please give us information about your medical status.</h2>
-        <hr />
+        <div class="header-part">
+          <h2>Please give us information about your medical status.</h2>
+        </div>
         <span class="user-input-row">
           <label for="user-blood-type">Blood type:</label>
           <select class="left-margin text-input" id="user-blood-type" v-model="blood_type">
@@ -19,7 +20,7 @@
           <input id="covid19" type="checkbox" v-model="has_covid19" />
         </span>
         <span class="user-input-row">
-          <span>Drugs:</span>
+          <span class="label-layout">Drugs:</span>
           <label for="asprin">Asprin</label>
           <input id="asprin" type="checkbox" value="Asprin" v-model="drugs" />
           <label for="zinc">Zinc</label>
@@ -53,6 +54,12 @@ export default {
   border-radius: 5px;
   width: 50%;
   outline: none;
+}
+
+.text-input:hover {
+  background-color: gray;
+  border: 1px solid gray;
+  color: white;
 }
 
 .left-margin {

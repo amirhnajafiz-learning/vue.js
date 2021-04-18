@@ -1,7 +1,8 @@
 <template>
     <div class="personalFormContainer">
-        <h2>Please fill out this form about your personal information.</h2>
-        <hr />
+        <div class="header-part">
+          <h2>Please fill out this form about your personal information.</h2>
+        </div>
         <span class="user-input-row">
           <label for="user-firstname">First name:</label>
           <input id="user-firstname" class="text-input" type="text" v-model="firstName" placeholder="Peter" required=true pattern="[A-Za-z]" />
@@ -15,7 +16,7 @@
           <input id="user-age" class="text-input" type="number" v-model="age" required=ture min=1 max=100 />
         </span>
         <span class="user-input-row">
-          <span>Gender:</span>
+          <span class="label-layout">Gender:</span>
           <label class="left-margin" for="man">Male:</label>
           <input type="radio" v-model="gender" id="man" value="man" />
           <label class="left-margin" for="women">Female:</label>
@@ -64,6 +65,12 @@ export default {
   border-radius: 5px;
   width: 50%;
   outline: none;
+}
+
+.text-input:focus {
+  background-color: gray;
+  border: 1px solid gray;
+  color: white;
 }
 
 .left-margin {
