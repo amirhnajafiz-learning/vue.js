@@ -2,22 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Landing Page</title>
+        <title>Dynamic Component</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
-        <h1>Landing Page Project in Vue.js</h1>
+        <h1>Build Dynamic Component in Vue.js</h1>
 
         <div id="app">
-            <cards-component 
-                v-for="card in cards"
-                :title="card.title"
-                :link="card.link"
-                :text="card.text"
-            >
-
-            </cards-component>
+            <button v-for="option in tabs" :key="option" :class="['tab-button', { active: currentTab === option }]" v-on:click="currentTab = option">
+                {{ option }}
+            </button>
+            <component v-bind:is="currentTabComponent"></component>
         </div>
 
         <script src="script.js"></script>
