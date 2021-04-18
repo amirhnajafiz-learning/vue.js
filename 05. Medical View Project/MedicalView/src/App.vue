@@ -55,10 +55,21 @@ body {
 
 .submit-button {
   display: block;
-  margin: 10px auto;
+  margin: 50px auto;
   padding: 10px;
   width: 100px;
   border-radius: 5px;
+  transition: padding 1s;
+  background-color: rgb(13,17,55);
+  color: white;
+  border: 0 solid black;
+  transition: width 1s;
+}
+
+.submit-button:hover {
+  width: 150px;
+  font-size: 20px;
+  background-color: rgb(13,17,40);
 }
 
 .user-input-row {
