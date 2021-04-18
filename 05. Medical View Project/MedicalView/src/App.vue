@@ -40,12 +40,41 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(229,33,101);
+}
+
 .submit-button {
   display: block;
   margin: 10px auto;
   padding: 10px;
   width: 100px;
   border-radius: 5px;
+}
+
+.user-input-row {
+  background-color: rgb(13,17,55);
+  color: white;
+  display: block;
+  padding: 30px 30px;
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 50%;
+  border-radius: 8px;
+}
+
+h2 {
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  margin: 15px;
 }
 </style>

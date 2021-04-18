@@ -4,30 +4,30 @@
         <hr />
         <span class="user-input-row">
           <label for="user-firstname">First name:</label>
-          <input id="user-firstname" type="text" v-model="firstName" placeholder="Peter" required=true pattern="[A-Za-z]" />
+          <input id="user-firstname" class="text-input" type="text" v-model="firstName" placeholder="Peter" required=true pattern="[A-Za-z]" />
         </span>
         <span class="user-input-row">
           <label for="user-lastname">Last name:</label>
-          <input id="user-lastname" type="text" v-model="lastName" placeholder="Griffen" required=true pattern="[A-Za-z]" />
+          <input id="user-lastname" class="text-input" type="text" v-model="lastName" placeholder="Griffen" required=true pattern="[A-Za-z]" />
         </span>
         <span class="user-input-row">
           <label for="user-age">Age:</label>
-          <input id="user-age" type="number" v-model="age" required=ture min=1 max=100 />
+          <input id="user-age" class="text-input" type="number" v-model="age" required=ture min=1 max=100 />
         </span>
         <span class="user-input-row">
           <span>Gender:</span>
-          <label for="man">Male:</label>
+          <label class="left-margin" for="man">Male:</label>
           <input type="radio" v-model="gender" id="man" value="man" />
-          <label for="women">Female:</label>
+          <label class="left-margin" for="women">Female:</label>
           <input type="radio" v-model="gender" id="women" value="woman" />
         </span>
         <span class="user-input-row">
           <label for="user-nationalId">National ID:</label>
-          <input id="user-nationalId" type="text" v-model="nationalId" placeholder="092XXXXXXX" pattern="[0-9]" />
+          <input id="user-nationalId" class="text-input" type="text" v-model="nationalId" placeholder="092XXXXXXX" pattern="[0-9]" />
         </span>
         <span class="user-input-row">
           <label for="cityOption">City:</label>
-          <select id="cityOption" v-model="city">
+          <select class="left-margin text-input" id="cityOption" v-model="city">
             <option id="0" value="Teh">Tehran</option>
             <option id="1" value="Mah">Mashhad</option>
             <option id="2" value="Tab">Tabriz</option>
@@ -58,22 +58,15 @@ export default {
 </script>
 
 <style scoped>
-  .user-input-row {
-    display: block;
-    padding: 20px;
-    margin: 10px auto;
-    border: 1px solid black;
-    width: 40%;
-    border-radius: 5px;
-  }
-  .submit-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100px;
-  }
-  .submit-button:hover {
-    background-color: darkgray;
-  }
+.text-input {
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  outline: none;
+}
+
+.left-margin {
+  margin-left: 20px;
+}
 </style>

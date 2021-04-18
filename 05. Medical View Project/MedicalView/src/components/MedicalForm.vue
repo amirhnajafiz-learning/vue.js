@@ -4,7 +4,7 @@
         <hr />
         <span class="user-input-row">
           <label for="user-blood-type">Blood type:</label>
-          <select id="user-blood-type" v-model="blood_type">
+          <select class="left-margin text-input" id="user-blood-type" v-model="blood_type">
             <option id="0" value="A+">A+</option>
             <option id="0" value="A-">A-</option>
             <option id="0" value="B+">B+</option>
@@ -47,12 +47,15 @@ export default {
 </script>
 
 <style scoped>
-  .user-input-row {
-    display: block;
-    padding: 20px;
-    margin: 10px auto;
-    border: 1px solid black;
-    width: 40%;
-    border-radius: 5px;
-  }
+.text-input {
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  outline: none;
+}
+
+.left-margin {
+  margin-left: 20px;
+}
 </style>
