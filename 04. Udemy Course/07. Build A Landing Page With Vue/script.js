@@ -14,7 +14,7 @@ const app = Vue.createApp({
                     title: "React",
                     link: {
                         url: "https://reactjs.org",
-                        src: "https://vuejs.org/images/logo.png"
+                        src: "https://www.roshdana.com/wp-content/uploads/2020/12/react.png"
                     },
                     text: "Complete component based user interface framework. Includes most core features. More common at startups."
                 },
@@ -22,7 +22,7 @@ const app = Vue.createApp({
                     title: "Angular",
                     link: {
                         url: "https://angular.io",
-                        src: "https://vuejs.org/images/logo.png"
+                        src: "https://angular.io/assets/images/logos/angular/angular.svg"
                     },
                     text: "Complete component based user interface framework. Includes most core features. More common at startups."
                 }
