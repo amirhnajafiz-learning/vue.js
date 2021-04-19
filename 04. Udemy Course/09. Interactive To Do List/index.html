@@ -27,11 +27,12 @@
             <button v-on:click="sortTasks(1)">Show Lastest</button>
             <button v-on:click="sortByPrio(-1)">High Priority</button>
             <button v-on:click="sortByPrio(1)">Low Priority</button>
+            <button v-on:click="getAllTasks">Download</button>
             <table>
                 <todo-item 
                     v-for="(task,index) in tasks" 
                     :title="task.title"
-                    :time="task.createTime"
+                    :time="generateDate(task.createTime)"
                     :key="task.id"
                     :priority="task.priority"
                     @remove="tasks.splice(index,1)"
