@@ -18,16 +18,25 @@
                     placeholder="Eg. Watch Vue Course"
                     v-model="newTask"
                 />
+                <label for="rangeInput">Set Priority</label>
+                <input id="rangeInput" type="range" min=0 max=5 v-model="currentPriority" oninput="amount.value=rangeInput.value" />
+                <span>{{ currentPriority }}</span>
                 <button>Submit</button>
             </form>
-            <ul>
+            <button v-on:click="sortTasks(-1)">Show Newest</button>
+            <button v-on:click="sortTasks(1)">Show Lastest</button>
+            <button v-on:click="sortByPrio(-1)">High Priority</button>
+            <button v-on:click="sortByPrio(1)">Low Priority</button>
+            <table>
                 <todo-item 
                     v-for="(task,index) in tasks" 
                     :title="task.title"
+                    :time="task.createTime"
                     :key="task.id"
+                    :priority="task.priority"
                     @remove="tasks.splice(index,1)"
                 ></todo-item>
-            </ul>
+            </table>
         </div>
 
         <script src="script.js"></script>
