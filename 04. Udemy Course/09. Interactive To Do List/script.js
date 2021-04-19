@@ -1,5 +1,4 @@
 // To do list Vue app codes
-
 const app = Vue.createApp({
     data() {
         return {
@@ -7,13 +6,16 @@ const app = Vue.createApp({
             currentPriority: 0,
             tasks: [],
             nextTaskId: 0,
-            notEmpty: false
+            emptySubmit: false
         }
     },
     methods: {
         addNewTask () { // Adds the current task to list , and resets the page
-            if (this.newTask == "")
+            if (this.newTask == "") {
+                this.emptySubmit = true
                 return
+            }
+            this.emptySubmit = false
             this.tasks.push({
                 id: this.nextTaskId++,
                 title: this.newTask,
@@ -41,8 +43,6 @@ const app = Vue.createApp({
         }
     }
 })
-
-
 app.component("todo-item", { // Each task component is a table row
     template: `
         <tr>
@@ -54,5 +54,5 @@ app.component("todo-item", { // Each task component is a table row
     `,
     props: ["title", "time", "priority"]
 })
-
+// Connecting the app
 app.mount("#app")
