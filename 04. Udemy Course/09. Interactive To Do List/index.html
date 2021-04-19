@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>To Do List</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
@@ -29,14 +30,16 @@
             <button v-on:click="sortByPrio(1)">Low Priority</button>
             <button v-on:click="getAllTasks">Download</button>
             <table>
-                <todo-item 
-                    v-for="(task,index) in tasks" 
-                    :title="task.title"
-                    :time="generateDate(task.createTime)"
-                    :key="task.id"
-                    :priority="task.priority"
-                    @remove="tasks.splice(index,1)"
-                ></todo-item>
+                <tbody>
+                    <todo-item 
+                        v-for="(task,index) in tasks" 
+                        :title="task.title"
+                        :time="generateDate(task.createTime)"
+                        :key="task.id"
+                        :priority="task.priority"
+                        @remove="tasks.splice(index,1)"
+                    ></todo-item>
+                </tbody>
             </table>
         </div>
 
