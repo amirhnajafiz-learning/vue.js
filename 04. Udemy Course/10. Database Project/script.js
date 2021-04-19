@@ -6,22 +6,22 @@ const app = Vue.createApp({
             dataColumns: ["title", "topic", "views"],
             dataSet: [
                 {
-                    title: "test1",
+                    title: "Amir",
                     topic: "game",
                     views: 2
                 },
                 {
-                    title: "test2",
+                    title: "Ali",
                     topic: "game4",
                     views: 5
                 },
                 {
-                    title: "test3",
+                    title: "Amir is fun",
                     topic: "game5",
                     views: 1
                 },
                 {
-                    title: "test4",
+                    title: "Ali is shit",
                     topic: "game6",
                     views: 1
                 }
