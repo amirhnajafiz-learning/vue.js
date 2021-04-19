@@ -26,7 +26,7 @@ const app = Vue.createApp({
             this.currentPriority = 0
         },
         generateDate (config) { // To modify date from createTime
-            return config.getDate() + "/" + config.getMonth() + "/" + config.getFullYear() + " " + config.getHours() + ":" + config.getMinutes()
+            return config.getDate() + "/" + config.getMonth() + "/" + config.getFullYear() + " " + config.getHours() + ":" + config.getMinutes() + ":" + config.getSeconds()
         },
         sortTasks (raise) { // Sort tasks by their time based on 'raise' 
             this.tasks.sort((a,b) => (a.createTime > b.createTime) ? raise : ((b.createTime > a.createTime) ? -1 * raise : 0))

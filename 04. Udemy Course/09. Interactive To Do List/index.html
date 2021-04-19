@@ -24,15 +24,15 @@
                 <label for="rangeInput">Set Priority</label>
                 <input id="rangeInput" type="range" min=0 max=5 v-model="currentPriority" oninput="amount.value=rangeInput.value" />
                 <span class="priority-number">{{ currentPriority }}</span>
-                <button class="submit">Submit</button>
+                <button class="submit btn btn-dark">Submit</button>
             </form>
             <hr />
             <div class="button-options">
-                <button v-on:click="sortTasks(-1)">Show Newest</button>
-                <button v-on:click="sortTasks(1)">Show Lastest</button>
-                <button v-on:click="sortByPrio(-1)">High Priority</button>
-                <button v-on:click="sortByPrio(1)">Low Priority</button>
-                <button v-on:click="getAllTasks">Download</button>
+                <button v-on:click="sortTasks(-1)" class="btn btn-secondary">Show Newest</button>
+                <button v-on:click="sortTasks(1)" class="btn btn-secondary">Show Lastest</button>
+                <button v-on:click="sortByPrio(-1)" class="btn btn-primary">High Priority</button>
+                <button v-on:click="sortByPrio(1)" class="btn btn-primary">Low Priority</button>
+                <button v-on:click="getAllTasks" class="btn btn-success">Download</button>
             </div>
             <div class="table-container">
                 <table class="table table-striped tasks-table">
@@ -49,7 +49,7 @@
                             <td>{{ task.title }}</td>
                             <td>{{ generateDate(task.createTime) }}</td>
                             <td>{{ task.priority }}</td>
-                            <td><button v-on:click="tasks.splice(index,1)"> Remove Task </button></td>
+                            <td><button v-on:click="tasks.splice(index,1)" class="btn btn-danger"> Remove Task </button></td>
                         </tr>
                     </tbody>
                 </table>
