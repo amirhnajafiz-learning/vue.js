@@ -1,3 +1,4 @@
+// Database app Vue script
 const app = Vue.createApp({
     el: "#database-website",
     data() {
@@ -6,31 +7,44 @@ const app = Vue.createApp({
             dataColumns: ["title", "topic", "views"],
             dataSet: [
                 {
-                    title: "Amir",
-                    topic: "game",
+                    title: "Learning vue js with Udemy course.",
+                    topic: "Vue.js",
                     views: 2
                 },
                 {
-                    title: "Ali",
-                    topic: "game4",
+                    title: "Tutorials point is also a good source.",
+                    topic: "Vue.js",
                     views: 5
                 },
                 {
-                    title: "Amir is fun",
-                    topic: "game5",
+                    title: "React js is good, but Vue js is better.",
+                    topic: "React js",
                     views: 1
                 },
                 {
-                    title: "Ali is shit",
-                    topic: "game6",
+                    title: "Learning react js is usefull in a front-end developer career.",
+                    topic: "React js",
+                    views: 1
+                },
+                {
+                    title: "By joinning Vue school you can access their full course in learning Vue,and you can be a pro front-end developer in few month.",
+                    topic: "Vue",
+                    views: 10
+                },
+                {
+                    title: "The markup language, that forms the skeleton of our website.",
+                    topic: "HTML5",
+                    views: 12
+                },
+                {
+                    title: "If your interested in putting HTML code in javascipt functions, use React js.",
+                    topic: "React",
                     views: 1
                 }
             ]
         }
     }
 })
-
-
 app.component("database-website-component", {
     template: "#grid-template",
     props: ["entries", "columns", "filterKey"],
@@ -43,11 +57,8 @@ app.component("database-website-component", {
         filteredTitles: function () {
             const sortKey = this.sortKey
             const filterKey = this.filterKey && this.filterKey.toLowerCase()
-
             const order = this.sortColumns[sortKey] || 1
-
             let entries = this.entries
-
             if (filterKey) {
                 entries = entries.filter( function(row) {
                     return Object.keys(row).some( function (key) 
@@ -67,16 +78,13 @@ app.component("database-website-component", {
                     return (x === y ? 0 : x > y ? 1 : -1) * order
                 })
             }
-            
             return entries
         },
         sortColumns() {
             const sortedColumns = {}
-
             this.columns.forEach( function (key) {
                 sortedColumns[key] = 1
             })
-
             return sortedColumns
         }
     },
@@ -90,5 +98,5 @@ app.component("database-website-component", {
         }
     }
 })
-
+// Connecting app to DOM
 app.mount("#database-website")

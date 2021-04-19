@@ -5,7 +5,6 @@
         <title>Database</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://unpkg.com/vue@next"></script>
-
         <script type="text/x-template" id="grid-template">
             <table>
                 <thead>
@@ -17,7 +16,6 @@
                         </th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr v-for="entry in filteredTitles">
                         <td v-for="key in columns">
@@ -27,12 +25,9 @@
                 </tbody>
             </table>
         </script>
-
     </head>
     <body>
-
         <h1>Create a database with Vue.js</h1>
-
         <div id="database-website">
             <form id="search">
                 <p>Search</p>
@@ -45,8 +40,6 @@
             >
             </database-website-component>
         </div>
-
         <script src="script.js"></script>
-
     </body>
 </html>

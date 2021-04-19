@@ -1,14 +1,16 @@
+/* Style codes */
 body {
     font-family: sans-serif;
     color: #40c98d;
     background-color: #27394a;
-    padding: 5%;
+    padding: 2% 5%;
 }
 
 table {
     background-color: #40c98d;
     color: #27394a;
     border-radius: 5px;
+    padding: 5px;
 }
 
 th, td {
