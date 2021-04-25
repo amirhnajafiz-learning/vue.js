@@ -3,6 +3,7 @@
     <table class="table table-dark mt-4">
       <thead>
         <tr>
+          <th scope="col">User id</th>
           <th scope="col">Id</th>
           <th scope="col">Title</th>
           <th scope="col">Body</th>
@@ -26,14 +27,12 @@ export default {
   data() {
     return {
       // This way of creating object of data for a component
-      posts: [
-        { id: 1, title: "post1", body: "aigohgagihaoga" },
-        { id: 2, title: "post2", body: "ahgiahghsihdd" },
-        { id: 3, title: "post3", body: "ahsihgishg" },
-        { id: 4, title: "post4", body: "ahhdoowtyow" },
-      ],
+      posts: []
     };
   },
+  created() {
+    
+  }
 };
 </script>
 
