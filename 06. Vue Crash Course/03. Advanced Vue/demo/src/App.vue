@@ -18,11 +18,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a>
+            <router-link class="nav-link" :to="'/'">Home</router-link> <span class="sr-only">(current)</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link class="nav-link" :to="'/contact'">Contact</router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -61,19 +60,21 @@
       </div>
     </nav>
     <!-- Two way of registering -->
-    <post-example />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 import PostExample from "./components/Posts";
+import Contact from "./components/Contact";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
     PostExample, // You also need to register in here and then use it up in template
+    Contact
   },
 };
 </script>

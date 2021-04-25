@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import Posts from './components/Posts.vue' // Importing Router
+import Contact from './components/Contact'
 
 // Using router in Vue
 Vue.use(VueRouter);
@@ -12,6 +13,9 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/', component: Posts
+  },
+  {
+    path: '/contact', component: Contact
   }
 ]
 
