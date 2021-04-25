@@ -19,7 +19,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({routes: routes}) // Defining router to register
+const router = new VueRouter({ routes: routes }) // Defining router to register
 
 Vue.config.productionTip = false
 

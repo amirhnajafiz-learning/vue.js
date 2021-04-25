@@ -18,7 +18,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link class="nav-link" :to="'/'">Home</router-link> <span class="sr-only">(current)</span>
+            <router-link class="nav-link" :to="'/'">Home</router-link>
+            <span class="sr-only">(current)</span>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" :to="'/contact'">Contact</router-link>
@@ -74,7 +75,7 @@ export default {
   components: {
     HelloWorld,
     PostExample, // You also need to register in here and then use it up in template
-    Contact
+    Contact,
   },
 };
 </script>
