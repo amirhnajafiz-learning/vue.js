@@ -10,7 +10,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="post in posts" :key="post.id">
+        <tr scope="row" v-for="post in posts" :key="post.id">
+          <td>{{ post.userId }}</td>
           <td>{{ post.id }}</td>
           <td>{{ post.title }}</td>
           <td>{{ post.body }}</td>
@@ -22,6 +23,8 @@
 
 
 <script>
+import axios from 'axios' // Importing from node modules
+
 export default {
   name: "PostExample",
   data() {
@@ -31,7 +34,9 @@ export default {
     };
   },
   created() {
-    console.log("Created")
+    axios.get('https://jsonplaceholder.typicode.com/posts').then(posts=> {
+      this.posts = posts.data
+    })
   }
 };
 </script>
